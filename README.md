@@ -1,3 +1,4 @@
+# Welcome to the frontend test
 Thank you for taking part of your time to perform this code test. This test is meant to evaluate the technical skills of the applicant. 
 
 Please read the following notes before you get started:
