@@ -4,7 +4,7 @@ import Styles from './sidebar.styled'
 const SideBar: React.FC = () => {
   return (
     <Styles.Container>
-      
+      Sidebar
     </Styles.Container>
   );
 }
