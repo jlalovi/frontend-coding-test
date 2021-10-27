@@ -4,7 +4,8 @@ import Styles from './topbar.styled'
 const Topbar: React.FC = () => {
   return (
     <Styles.Container>
-        TopBar
+      <button>Year</button>
+      <button>Month</button>
     </Styles.Container>
   );
 }

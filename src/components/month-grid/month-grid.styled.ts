@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
-  border: 1px solid black;
+  border-top: 1px solid ${({theme}) => theme.gray_300};
+  border-left: 1px solid ${({theme}) => theme.gray_300};
 `;
 
 export default {
