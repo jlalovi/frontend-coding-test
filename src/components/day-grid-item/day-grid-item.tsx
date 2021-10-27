@@ -1,10 +1,18 @@
 import React from 'react';
+import Styles from './day-grid-item.styled';
 
-const DayGridItem: React.FC = () => {
+
+interface IProps {
+  day: number;
+}
+
+const DayGridItem: React.FC<IProps> = ({ day }) => {
   return (
-    <div>
-      Day
-    </div>
+    <Styles.Container>
+
+      <div className='bubble' />
+      <p className='day'>{day}</p>
+    </Styles.Container>
   );
 }
 
