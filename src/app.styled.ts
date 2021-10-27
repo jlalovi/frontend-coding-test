@@ -7,7 +7,7 @@ const Container = styled.div`
 `;
 const Content = styled.div`
   display: grid;
-  grid-template-columns: 2fr  6fr;
+  grid-template-columns: 1.5fr  6.5fr;
   height: 100%;
 `;
 

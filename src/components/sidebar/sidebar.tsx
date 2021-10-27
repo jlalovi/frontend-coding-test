@@ -1,9 +1,17 @@
 import React from 'react';
-import { Container, InputText, FlexContainer, ListContainer, Button } from './sidebar.styled'
+import { Category } from '../../utils/types';
+import { Container, InputText, FlexContainer, ListContainer, Button, CategoryItem } from './sidebar.styled'
 
-// could recieve a list of categories;
 const SideBar: React.FC = () => {
-  const initialCategories: string[] = ['Holidays', 'Work']; // delete me
+  const initialCategories: Category[] = [{
+    name: 'Holidays',
+    color: '#FF3D3D'
+  },
+  {
+    name: 'Work',
+    color: '#3DFFB8'
+  }]; // delete me
+
   return (
     <Container>
       <FlexContainer>
@@ -11,8 +19,11 @@ const SideBar: React.FC = () => {
         <Button>Create</Button>
       </FlexContainer>
       <ListContainer>
-        {initialCategories.map(category => (
-          <li>{category}</li>
+        {initialCategories.map(({ name, color }) => (
+          <CategoryItem {...{ color }}>
+            <div className="color"/>
+            <li className="item-name">{name}</li>
+          </CategoryItem>
         ))}
       </ListContainer>
     </Container>
