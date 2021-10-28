@@ -16,14 +16,18 @@ const TopBar = styled.div`
   display: grid;
   grid-template-columns: 100px 1fr 100px;
   width: 100%;
+  height: 0;
+  
   .button-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1em;
     color: ${({ theme }) => theme.cyan_600};
-    width: fit-content;
-    float: right;
-    padding: 1rem 1.2rem;
+    padding: 2rem 0;
+  }
+  .title {
+    padding: 2rem;
+    font-size: 40px;
   }
 `;
 

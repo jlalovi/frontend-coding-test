@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface ICategoryItem {
+  color: string;
+  visible: boolean;  
+}
 
 const Container = styled.div`
   border-top: 1px solid  ${({theme}) => theme.gray_300};
@@ -19,22 +23,28 @@ const Button = styled.button`
   color: white;
 `;
 
-const CategoryItem = styled.div`
+const CategoryItem = styled.div<ICategoryItem>`
   display: flex;
   margin-bottom: 10px;
   cursor: pointer;
 
   .color {
-    background-color: ${({color}) => color };
-    border-radius: 100%;
+    background-color: ${({color, visible}) => !!visible ? color : 'white' };
+    border: 1px solid ${({ color }) => color};
+    border-radius: 80%;
     margin-right: .5rem;
     width: 18px;
+    :hover {
+      background-color: ${({color}) => color };
+    }
   }
   .item-name {
     list-style: none;
-    :hover {
-      color: ${({color}) => color };
-      text-decoration: underline;
+
+    svg {
+      :hover {
+        color: ${({ color }) => color};
+      }
     }
   }
 `;

@@ -8,7 +8,6 @@ const Container = styled.div<IProps>`
   display: flex;
   position: relative;
   width: 100%;
-  min-height: 200px;
   border: 1px solid ${({ theme }) => theme.gray_300};
   background-color: ${({ theme, disabled }) => disabled && theme.gray_100};
   cursor: ${({ disabled }) => !disabled && 'pointer'};

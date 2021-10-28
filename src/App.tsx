@@ -14,7 +14,7 @@ const App: React.FC = () => {
       <ThemeProvider {...theme}>
         <Styles.Content>
           <SideBar />
-            <MonthGrid />
+          <MonthGrid />
         </Styles.Content>
       </ThemeProvider>
     </Styles.Container>
