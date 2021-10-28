@@ -2,7 +2,7 @@
 Thank you for taking part of your time to perform this code test. This test is meant to evaluate the technical skills of the applicant. 
 
 Please read the following notes before you get started:
-- Clone this project and work on the interface **in the same way you would do in a real project**
+- Fork and clone this project and work on the interface **in the same way you would do in a real project**
 - Ask us any questions you have
 - You can google anything you need
 - Also, feel free to improve or refactor our codebase whenever you want.
