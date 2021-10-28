@@ -3,48 +3,25 @@ Thank you for taking part of your time to perform this code test. This test is m
 
 Please read the following notes before you get started:
 - Clone this project and work on the interface **in the same way you would do in a real project**
-- The interface itself is not the evaluation critería. We will evaluate the work organization and code structure more. See: **Positive aspects evaluated**
 - Ask us any questions you have
 - You can google anything you need
+- Also, feel free to improve or refactor our codebase whenever you want.
 
 ## Statement
+
 Build a calendar with days & categories.
 
-### Calendar views
-2 view options: Year & month. 
-You have to be able to switch from one view to the other
-Both views must be viewable on multiple devices.
-In the month view: Be able to see the categories associated with that day.
+- From the sidebar, you should be able to create a new event. When an event is created, it will be assigned a random colour (getRandomColor function).
+- From the event list, you should be able to edit an event by clicking on its name.
+- From the event list, you can also delete an event. The result of editing/deleting an event must be reflected in the calendar.
+- By clicking on a day in the calendar, the list of existing events will appear and an event can be assigned to that specific day.
 
-### Categories List
-Initially 2: Holidays & Work
-Be able to add & delete categories. If a category is deleted, it will be deleted from all the assigned days.
+## We will value...
 
-### Assign/Unassign categories 1
-First click on 1 category on the Categories List, and then click on one or several days. The days will be assigned with that category, or unassigned if they were already assigned previously.
-NOTE: Clicking on a category does not apply any filter.
-BONUS: Click category, and then click and drag to select multiple days.
-
-
-### Assign/Unassign categories 2
-First click on a day, and then:
-Be able to assign a category to that day
-Be able to unassign an already assigned category.
-Be able to create a new category and assign it to that day.
-
-
-PS: You can check Google Calendar and Github label’s management to inspire you
-Design
-
-----------------------
-
-## Positive aspects evaluated
-- Use of React hooks
-- Design patterns and good architectural decisions
-- Typescript
-- Coding JS with newer standards (ES6/ES7)
-- Styling methodology and language/library
-- Accessibility
-- VCS and organization (Git).
-- Tests
-- Public deployment
+- Use standard patterns and apply the official style guides of the libraries we ask you to use.
+- Well structured and readable code according to the standards of the Clean Code guide.
+- That you have used Typescript, declarative and applying the functional patterns proposed by React.
+- Adhere to SOLID principles, at least those that can be applied in React.
+- Your solution has a clean UI and a nice look & feel.
+- You have provided test coverage.
+- A console clean of errors and warnings. 
