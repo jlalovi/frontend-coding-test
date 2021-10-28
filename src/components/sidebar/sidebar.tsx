@@ -21,7 +21,7 @@ const SideBar: React.FC = () => {
       <ListContainer>
         {initialCategories.map(({ name, color }) => (
           <CategoryItem {...{ color }}>
-            <div className="color"/>
+            <div className="color" />
             <li className="item-name">{name}</li>
           </CategoryItem>
         ))}

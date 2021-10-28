@@ -32,6 +32,10 @@ const CategoryItem = styled.div`
   }
   .item-name {
     list-style: none;
+    :hover {
+      color: ${({color}) => color };
+      text-decoration: underline;
+    }
   }
 `;
 
