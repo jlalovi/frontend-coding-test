@@ -9,7 +9,7 @@ Please read the following notes before you get started:
 
 ## Statement
 
-Build a calendar with days & categories.
+Build a calendar with days & events.
 
 - From the sidebar, you should be able to create a new event. When an event is created, it will be assigned a random colour (getRandomColor function).
 - From the event list, you should be able to edit an event by clicking on its name.
