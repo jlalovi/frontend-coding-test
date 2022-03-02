@@ -16,6 +16,12 @@ Build a calendar with days & events.
 - From the event list, you can also delete an event. The result of editing/deleting an event must be reflected in the calendar.
 - By clicking on a day in the calendar, the list of existing events will appear and an event can be assigned to that specific day.
 
+### Optional
+
+- Add some tests to your code.
+- Improve the aspect of the calendar.
+- A console clean of errors and warnings. 
+
 ## We will value...
 
 - Use standard patterns and apply the official style guides of the libraries we ask you to use.
@@ -23,5 +29,4 @@ Build a calendar with days & events.
 - That you have used Typescript, declarative and applying the functional patterns proposed by React.
 - Adhere to SOLID principles, at least those that can be applied in React.
 - Your solution has a clean UI and a nice look & feel.
-- You have provided test coverage.
-- A console clean of errors and warnings. 
+
