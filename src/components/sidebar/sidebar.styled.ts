@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface ICategoryItem {
+interface IEventItem {
   color: string;
   visible: boolean;
 }
@@ -13,7 +13,7 @@ export const Container = styled.div`
 
 export const InputText = styled.input`
   height: 30px;
-  min-width: 80%;
+  width: 100%;
 `;
 
 export const Button = styled.button`
@@ -23,7 +23,7 @@ export const Button = styled.button`
   color: white;
 `;
 
-export const CategoryItem = styled.div<ICategoryItem>`
+const EventItem = styled.div<IEventItem>`
   display: flex;
   margin-bottom: 10px;
   cursor: pointer;
@@ -53,6 +53,7 @@ export const ListContainer = styled.ul`
   padding: 0.5rem 0rem;
 `;
 
-export const FlexContainer = styled.div`
-  display: flex;
+export const AddItemContainer = styled.div`
+  display: inline-flex;
+  width: 100%;
 `;

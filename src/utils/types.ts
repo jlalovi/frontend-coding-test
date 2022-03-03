@@ -1,5 +1,4 @@
-export interface Category {
+export interface Event {
   name: string;
   color: string;
-  visible: boolean;
 }
