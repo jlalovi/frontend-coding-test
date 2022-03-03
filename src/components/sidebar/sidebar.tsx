@@ -1,13 +1,6 @@
 import React from "react";
 import { Category } from "../../utils/types";
-import {
-  Container,
-  InputText,
-  FlexContainer,
-  ListContainer,
-  Button,
-  CategoryItem,
-} from "./sidebar.styled";
+import * as Styles from "./sidebar.styled";
 import { Delete } from "@styled-icons/fluentui-system-filled";
 
 const SideBar: React.FC = () => {
@@ -25,23 +18,23 @@ const SideBar: React.FC = () => {
   ]; // delete me
 
   return (
-    <Container>
-      <FlexContainer>
-        <InputText placeholder="Enter a new category" />
-        <Button>Create</Button>
-      </FlexContainer>
-      <ListContainer>
+    <Styles.Container>
+      <Styles.FlexContainer>
+        <Styles.InputText placeholder="Enter a new category" />
+        <Styles.Button>Create</Styles.Button>
+      </Styles.FlexContainer>
+      <Styles.ListContainer>
         {initialCategories.map(({ name, color, visible }, index) => (
-          <CategoryItem key={index} {...{ color, visible }}>
+          <Styles.CategoryItem key={index} {...{ color, visible }}>
             <div className="color" />
             <li className="item-name">
               {name}
               <Delete height={23} />
             </li>
-          </CategoryItem>
+          </Styles.CategoryItem>
         ))}
-      </ListContainer>
-    </Container>
+      </Styles.ListContainer>
+    </Styles.Container>
   );
 };
 

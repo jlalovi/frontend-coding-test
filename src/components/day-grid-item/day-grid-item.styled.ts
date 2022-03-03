@@ -4,7 +4,7 @@ interface IProps {
   disabled: boolean;
 }
 
-const Container = styled.div<IProps>`
+export const Container = styled.div<IProps>`
   display: flex;
   position: relative;
   width: 100%;
@@ -27,7 +27,3 @@ const Container = styled.div<IProps>`
     background-color: ${({ theme }) => theme.gray_100};
   }
 `;
-
-export default {
-  Container,
-};

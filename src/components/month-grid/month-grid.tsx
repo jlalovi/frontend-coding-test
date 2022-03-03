@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MONTH_NAMES, showCalendar } from "../../utils/calendar";
 import DayGridItem from "../day-grid-item/day-grid-item";
-import Styles from "./month-grid.styled";
+import * as Styles from "./month-grid.styled";
 import { ArrowLeftCircle } from "@styled-icons/bootstrap/ArrowLeftCircle";
 import { ArrowRightCircle } from "@styled-icons/bootstrap/ArrowRightCircle";
 

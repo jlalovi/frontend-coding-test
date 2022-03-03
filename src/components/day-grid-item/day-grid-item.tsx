@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./day-grid-item.styled";
+import * as Styles from "./day-grid-item.styled";
 
 interface IProps {
   day: number;

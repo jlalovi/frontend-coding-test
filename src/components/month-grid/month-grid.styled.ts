@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
-const Container = styled.div`
+export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   border-top: 1px solid ${({ theme }) => theme.gray_300};
   border-left: 1px solid ${({ theme }) => theme.gray_300};
 `;
-const Week = styled.div`
+export const Week = styled.div`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 `;
 
-const TopBar = styled.div`
+export const TopBar = styled.div`
   display: grid;
   grid-template-columns: 100px 1fr 100px;
   width: 100%;
@@ -29,9 +29,3 @@ const TopBar = styled.div`
     font-size: 40px;
   }
 `;
-
-export default {
-  Container,
-  Week,
-  TopBar,
-};
