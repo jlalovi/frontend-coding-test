@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 interface IEventItem {
   color: string;
-  visible: boolean;
 }
 
 export const Container = styled.div`
@@ -24,28 +23,27 @@ export const Button = styled.button`
 `;
 
 export const EventItem = styled.div<IEventItem>`
-  display: flex;
+  display: inline-flex;
   margin-bottom: 10px;
-  cursor: pointer;
+  align-items: center;
 
   .color {
-    background-color: ${({ color, visible }) => (!!visible ? color : "white")};
-    border: 1px solid ${({ color }) => color};
-    border-radius: 80%;
+    background-color: ${({ color }) => color};
+    border: 1px solid ${({ theme }) => theme.gray_800};
+    border-radius: 100%;
     margin-right: 0.5rem;
-    width: 18px;
-    :hover {
-      background-color: ${({ color }) => color};
-    }
+    width: 15px;
+    height: 15px;
   }
   .item-name {
     list-style: none;
+    display: inline-flex;
+    cursor: text;
+  }
 
-    svg {
-      :hover {
-        color: ${({ color }) => color};
-      }
-    }
+  svg:hover {
+    opacity: 0.5;
+    cursor: pointer;
   }
 `;
 
