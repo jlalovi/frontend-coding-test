@@ -23,7 +23,7 @@ export const Button = styled.button`
   color: white;
 `;
 
-const EventItem = styled.div<IEventItem>`
+export const EventItem = styled.div<IEventItem>`
   display: flex;
   margin-bottom: 10px;
   cursor: pointer;

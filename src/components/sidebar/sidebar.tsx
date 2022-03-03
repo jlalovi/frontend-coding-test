@@ -1,7 +1,7 @@
 import React from "react";
 import * as Styles from "./sidebar.styled";
-import { Event } from "../../utils/types";
-import { Delete } from "@styled-icons/fluentui-system-filled";
+/* import { Event } from "../../utils/types";
+import { Delete } from "@styled-icons/fluentui-system-filled"; */
 
 const SideBar: React.FC = () => {
   return (
