@@ -31,8 +31,8 @@ const SideBar: React.FC = () => {
         <Button>Create</Button>
       </FlexContainer>
       <ListContainer>
-        {initialCategories.map(({ name, color, visible }) => (
-          <CategoryItem {...{ color, visible }}>
+        {initialCategories.map(({ name, color, visible }, index) => (
+          <CategoryItem key={index} {...{ color, visible }}>
             <div className="color" />
             <li className="item-name">
               {name}

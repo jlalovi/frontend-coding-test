@@ -31,11 +31,11 @@ const MonthGrid: React.FC = () => {
         </div>
       </Styles.TopBar>
       {currentCalendar.map(({ days }, weekIndex) => (
-        <Styles.Week>
+        <Styles.Week key={weekIndex}>
           {days.map((day, key) => (
             <DayGridItem
+              key={key}
               {...{
-                key,
                 day,
                 disabled:
                   (weekIndex === 0 && day > 25) ||
