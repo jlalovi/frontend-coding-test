@@ -11,10 +11,10 @@ Please read the following notes before you get started:
 
 On our current calendar, develop this functionality:
 
-- From the sidebar, you should be able to create a new event. When an event is created, it will be assigned a random colour (getRandomColor function).
-- By clicking on a day in the calendar, the list of existing events will appear in a modal. You should be able to click an event and assign it to that specific day.
-- From the event list, you should be able to edit an event by clicking on its name.
-- From the event list, you should also delete an event. 
+- From the sidebar, you should be able to create a new event by entering his name. An event also has assigned a random colour (use getRandomColor function).
+- By clicking on a day in the calendar, the list of existing events will appear in a modal. Here you should be able to click an event and assign it to that specific day.
+- From the sidebar event list, you should be able to edit an event by clicking on its name.
+- From the sidebar event list, you should also delete an event.
 - The result of editing/deleting an event must be reflected in the calendar day events.
 
 ## Optional
