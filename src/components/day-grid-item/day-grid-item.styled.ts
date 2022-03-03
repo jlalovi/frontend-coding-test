@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface IProps {
   disabled: boolean;
@@ -10,13 +10,13 @@ const Container = styled.div<IProps>`
   width: 100%;
   border: 1px solid ${({ theme }) => theme.gray_300};
   background-color: ${({ theme, disabled }) => disabled && theme.gray_100};
-  cursor: ${({ disabled }) => !disabled && 'pointer'};
-  
+  cursor: ${({ disabled }) => !disabled && "pointer"};
+
   .day {
     padding: 0 1rem;
   }
 
-  .bubble{
+  .bubble {
     position: absolute;
     z-index: -1;
     top: 12px;
@@ -30,5 +30,4 @@ const Container = styled.div<IProps>`
 
 export default {
   Container,
-
-}
+};

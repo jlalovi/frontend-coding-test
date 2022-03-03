@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { THEMES, AvailableTheme } from '../assets/themes/main-theme';
+import { createSlice } from "@reduxjs/toolkit";
+import { THEMES, AvailableTheme } from "../assets/themes/main-theme";
 
 interface IThemeState {
   current: AvailableTheme;
@@ -11,7 +11,7 @@ const initialState: IThemeState = {
 
 const themeSlice = createSlice({
   initialState,
-  name: 'theme',
+  name: "theme",
   reducers: {
     toggleTheme(state) {
       state.current = THEMES.LIGHT;
@@ -19,8 +19,6 @@ const themeSlice = createSlice({
   },
 });
 
-export const {
-  toggleTheme,
-} = themeSlice.actions;
+export const { toggleTheme } = themeSlice.actions;
 
 export default themeSlice.reducer;

@@ -1,19 +1,28 @@
-import React from 'react';
-import { Category } from '../../utils/types';
-import { Container, InputText, FlexContainer, ListContainer, Button, CategoryItem } from './sidebar.styled'
-import { Delete } from '@styled-icons/fluentui-system-filled'
+import React from "react";
+import { Category } from "../../utils/types";
+import {
+  Container,
+  InputText,
+  FlexContainer,
+  ListContainer,
+  Button,
+  CategoryItem,
+} from "./sidebar.styled";
+import { Delete } from "@styled-icons/fluentui-system-filled";
 
 const SideBar: React.FC = () => {
-  const initialCategories: Category[] = [{
-    name: 'Holidays',
-    color: '#FF3D3D',
-    visible: false,
-  },
-  {
-    name: 'Work',
-    color: '#3DFFB8',
-    visible: false
-  }]; // delete me
+  const initialCategories: Category[] = [
+    {
+      name: "Holidays",
+      color: "#FF3D3D",
+      visible: false,
+    },
+    {
+      name: "Work",
+      color: "#3DFFB8",
+      visible: false,
+    },
+  ]; // delete me
 
   return (
     <Container>
@@ -34,6 +43,6 @@ const SideBar: React.FC = () => {
       </ListContainer>
     </Container>
   );
-}
+};
 
 export default SideBar;

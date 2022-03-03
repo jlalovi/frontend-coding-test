@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
@@ -7,11 +7,11 @@ const Container = styled.div`
 `;
 const Content = styled.div`
   display: grid;
-  grid-template-columns: 1.5fr  6.5fr;
+  grid-template-columns: 1.5fr 6.5fr;
   height: 100%;
 `;
 
 export default {
   Container,
   Content,
-}
+};

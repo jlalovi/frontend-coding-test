@@ -1,5 +1,5 @@
-import React from 'react';
-import Styles from './day-grid-item.styled';
+import React from "react";
+import Styles from "./day-grid-item.styled";
 
 interface IProps {
   day: number;
@@ -9,10 +9,10 @@ interface IProps {
 const DayGridItem: React.FC<IProps> = ({ day, disabled }) => {
   return (
     <Styles.Container {...{ disabled }}>
-      <div className='bubble' />
-      <p className='day'>{day}</p>
+      <div className="bubble" />
+      <p className="day">{day}</p>
     </Styles.Container>
   );
-}
+};
 
 export default DayGridItem;

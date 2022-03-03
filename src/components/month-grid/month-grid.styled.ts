@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-
+import styled from "styled-components";
 
 const Container = styled.div`
   display: grid;
@@ -8,8 +7,8 @@ const Container = styled.div`
   border-left: 1px solid ${({ theme }) => theme.gray_300};
 `;
 const Week = styled.div`
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
 `;
 
 const TopBar = styled.div`
@@ -17,7 +16,7 @@ const TopBar = styled.div`
   grid-template-columns: 100px 1fr 100px;
   width: 100%;
   height: 0;
-  
+
   .button-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -35,4 +34,4 @@ export default {
   Container,
   Week,
   TopBar,
-}
+};

@@ -1,14 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore } from "@reduxjs/toolkit";
 
-import rootReducer from './root-reducer';
+import rootReducer from "./root-reducer";
 
 const store = configureStore({
   reducer: rootReducer,
 });
 
 if ((module as any).hot) {
-  (module as any).hot.accept('./root-reducer', () => {
-    const newRootReducer = require('./root-reducer').default;
+  (module as any).hot.accept("./root-reducer", () => {
+    const newRootReducer = require("./root-reducer").default;
     store.replaceReducer(newRootReducer);
   });
 }
