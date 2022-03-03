@@ -11,7 +11,7 @@ const SideBar: React.FC = () => {
         <Styles.Button>Create</Styles.Button>
       </Styles.AddItemContainer>
       <Styles.ListContainer>
-        {/* {TODO List here yout events} */}
+        {/* {TODO List here your events} */}
 
         {/* {myEvents.map(({ name, color }, index) => (
           <Styles.EventItem key={index} color={color}>
