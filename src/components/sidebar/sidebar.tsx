@@ -7,7 +7,7 @@ const SideBar: React.FC = () => {
   return (
     <Styles.Container>
       <Styles.AddItemContainer>
-        <Styles.InputText placeholder="Enter a new category" />
+        <Styles.InputText placeholder="Enter a new event" />
         <Styles.Button>Create</Styles.Button>
       </Styles.AddItemContainer>
       <Styles.ListContainer>
@@ -20,7 +20,7 @@ const SideBar: React.FC = () => {
               {name}
               <Delete height={23} />
             </li>
-          </Styles.EventItem>
+          </Styles.EventItem> 
         ))}*/}
       </Styles.ListContainer>
     </Styles.Container>

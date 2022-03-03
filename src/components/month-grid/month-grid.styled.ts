@@ -23,6 +23,10 @@ export const TopBar = styled.div`
     grid-column-gap: 1em;
     color: ${({ theme }) => theme.cyan_600};
     padding: 2rem 0;
+
+    svg {
+      cursor: pointer;
+    }
   }
   .title {
     padding: 2rem;
