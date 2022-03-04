@@ -38,7 +38,7 @@ const MonthGrid: React.FC = () => {
                 {...{
                   day,
                   disabled:
-                    (weekIndex === 0 && day > 25) ||
+                    (weekIndex === 0 && day >= 25) ||
                     (weekIndex === currentCalendar.length - 1 && day < 22),
                 }}
               />
