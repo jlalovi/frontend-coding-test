@@ -1,5 +1,5 @@
 import { AppThemes } from "../../assets/themes/main-theme";
-import { RootState } from "../../redux/root-reducer";
+import { RootState } from "../../redux/store";
 import { useSelector } from "react-redux";
 
 export const useTheme = () => {

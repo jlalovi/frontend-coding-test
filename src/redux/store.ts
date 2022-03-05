@@ -1,19 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
-
-import rootReducer from "./root-reducer";
+import themeSlice from "./theme-slice";
 
 const store = configureStore({
-  reducer: rootReducer,
+  // If it is an object of slice reducers, will automatically create the
+  // root reducer by passing this object to the Redux combineReducers utility
+  // See https://redux-toolkit.js.org/api/configureStore#reducer
+  reducer: {
+    theme: themeSlice,
+  },
 });
 
-if ((module as any).hot) {
-  (module as any).hot.accept("./root-reducer", () => {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const newRootReducer = require("./root-reducer").default;
-    store.replaceReducer(newRootReducer);
-  });
-}
-
 export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;
 
 export default store;
