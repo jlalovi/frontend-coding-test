@@ -2,26 +2,28 @@ import React, { useState } from "react";
 import { MONTH_NAMES, showCalendar } from "../../utils/calendar";
 import DayGridItem from "../day-grid-item/day-grid-item";
 import * as Styles from "./month-grid.styled";
-import { ArrowLeftCircle } from "@styled-icons/bootstrap/ArrowLeftCircle";
-import { ArrowRightCircle } from "@styled-icons/bootstrap/ArrowRightCircle";
 
 const MonthGrid: React.FC = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
   const currentYear = new Date().getFullYear();
   const currentCalendar = showCalendar(currentMonth, currentYear);
+  const isFirstMonth = currentMonth === 0;
+  const isLastMonth = currentMonth === 11;
 
   return (
     <Styles.Container>
       <Styles.TopBar>
         <Styles.Title>{MONTH_NAMES[currentMonth]}</Styles.Title>
         <Styles.ButtonGroup>
-          <ArrowLeftCircle
+          <Styles.ArrowLeftCircleStyled
+            disabled={isFirstMonth}
             size={40}
             onClick={() =>
               currentMonth > 0 && setCurrentMonth(currentMonth - 1)
             }
           />
-          <ArrowRightCircle
+          <Styles.ArrowRightCircleStyled
+            disabled={isLastMonth}
             size={40}
             onClick={() =>
               currentMonth < 11 && setCurrentMonth(currentMonth + 1)
