@@ -14,7 +14,8 @@ const themeSlice = createSlice({
   name: "theme",
   reducers: {
     toggleTheme(state) {
-      state.current = THEMES.LIGHT;
+      state.current =
+        state.current === THEMES.LIGHT ? THEMES.LIGHT2 : THEMES.LIGHT;
     },
   },
 });

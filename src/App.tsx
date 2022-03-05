@@ -6,10 +6,10 @@ import SideBar from "./components/sidebar/sidebar";
 import { useTheme } from "./utils/hooks/useTheme";
 
 const App: React.FC = () => {
-  const theme = useTheme();
+  const { theme } = useTheme();
   return (
     <Styles.Container>
-      <ThemeProvider {...theme}>
+      <ThemeProvider theme={theme}>
         <Styles.Content>
           <SideBar />
           <MonthGrid />
