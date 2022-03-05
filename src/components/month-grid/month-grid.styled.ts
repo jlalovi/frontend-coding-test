@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ArrowLeftCircle } from "@styled-icons/bootstrap/ArrowLeftCircle";
 import { ArrowRightCircle } from "@styled-icons/bootstrap/ArrowRightCircle";
 
@@ -34,18 +34,18 @@ export const ButtonGroup = styled.div`
   justify-items: center;
   align-content: center;
 `;
-interface IProps {
+interface ButtonProps {
   disabled: boolean;
 }
-export const ArrowLeftCircleStyled = styled(ArrowLeftCircle)<IProps>`
-  cursor: ${({ disabled }) => (disabled ? "default" : "pointer")};
-  color: ${({ disabled, theme }) =>
-    disabled ? theme.gray_300 : theme.cyan_600};
+const PaginationButton = ({ disabled }: ButtonProps) => css`
+  cursor: ${disabled ? "default" : "pointer"};
+  color: ${({ theme }) => (disabled ? theme.gray_300 : theme.cyan_600)};
 `;
-export const ArrowRightCircleStyled = styled(ArrowRightCircle)<IProps>`
-  cursor: ${({ disabled }) => (disabled ? "default" : "pointer")};
-  color: ${({ disabled, theme }) =>
-    disabled ? theme.gray_300 : theme.cyan_600};
+export const ArrowLeftCircleStyled = styled(ArrowLeftCircle)<ButtonProps>`
+  ${({ disabled }) => PaginationButton({ disabled })};
+`;
+export const ArrowRightCircleStyled = styled(ArrowRightCircle)<ButtonProps>`
+  ${({ disabled }) => PaginationButton({ disabled })};
 `;
 
 export const Title = styled.div`
