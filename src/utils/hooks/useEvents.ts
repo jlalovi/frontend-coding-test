@@ -1,14 +1,22 @@
 import { useAppSelector, useAppDispatch } from "../redux-hooks-utils";
 import { getRandomColor, getRandomUUID } from "../functions";
+import { Event } from "../types";
 import {
   addEvent,
   removeEventById,
   updateEvent,
 } from "../../redux/events-slice";
 
-export const useTheme = () => {
+export const useEvents = () => {
   const dispatch = useAppDispatch();
-  const events = useAppSelector((state) => state.events.entities);
+  const eventsEntityState = useAppSelector((state) => state.events);
+
+  const events: Array<Event> = [];
+  eventsEntityState.ids.forEach((eventId) => {
+    const event = eventsEntityState.entities[eventId];
+    event && events.push(event);
+  });
+
   return {
     events,
     addEvent: (name: string) =>

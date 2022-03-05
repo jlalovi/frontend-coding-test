@@ -1,29 +1,36 @@
 import React from "react";
-import * as Styles from "./sidebar.styled";
-import { useTheme } from "../../utils/hooks/useTheme";
-import { Event } from "../../utils/types";
 import { Delete } from "@styled-icons/fluentui-system-filled";
+import * as Styles from "./sidebar.styled";
+import TextField from "../textfield/textfield";
+import { useTheme } from "../../utils/hooks/useTheme";
+import { useEvents } from "../../utils/hooks/useEvents";
 
 const SideBar: React.FC = () => {
   const { toggleTheme } = useTheme();
+  const { addEvent, events: myEvents } = useEvents();
+
+  const addEventHandler = (newEventName: string) => {
+    addEvent(newEventName);
+  };
+
   return (
     <Styles.Container>
       <button onClick={toggleTheme}>Switch theme</button>
-      <Styles.AddItemContainer>
-        <Styles.InputText placeholder="Enter a new event" />
-        <Styles.Button>Create</Styles.Button>
-      </Styles.AddItemContainer>
+      <TextField
+        eventHandler={addEventHandler}
+        placeholder="Enter a new event"
+        buttonTitle="Create"
+      />
       <Styles.ListContainer>
-        {/* {TODO List here your events} */}
-        {/* {myEvents.map({ name, color }, index) => (
-          <Styles.EventItem key={index} color={color}>
+        {myEvents.map(({ name, color, id }) => (
+          <Styles.EventItem key={id} color={color}>
             <li className="item-name">
               <div className="color" />
               {name}
             </li>
             <Delete height={23} />
           </Styles.EventItem>
-        )} */}
+        ))}
       </Styles.ListContainer>
     </Styles.Container>
   );

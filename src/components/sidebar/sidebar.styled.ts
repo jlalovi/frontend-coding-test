@@ -10,18 +10,6 @@ export const Container = styled.div`
   padding: 1.5rem;
 `;
 
-export const InputText = styled.input`
-  height: 30px;
-  width: 100%;
-`;
-
-export const Button = styled.button`
-  background-color: ${({ theme }) => theme.dark_blue_700};
-  transition: 0.3s;
-  cursor: pointer;
-  color: white;
-`;
-
 export const EventItem = styled.div<IEventItem>`
   display: inline-flex;
   margin-bottom: 10px;
@@ -49,9 +37,4 @@ export const EventItem = styled.div<IEventItem>`
 
 export const ListContainer = styled.ul`
   padding: 0.5rem 0rem;
-`;
-
-export const AddItemContainer = styled.div`
-  display: inline-flex;
-  width: 100%;
 `;
