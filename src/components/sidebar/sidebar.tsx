@@ -7,7 +7,7 @@ import { useEvents } from "../../utils/hooks/useEvents";
 
 const SideBar: React.FC = () => {
   const { toggleTheme } = useTheme();
-  const { addEvent, events: myEvents } = useEvents();
+  const { addEvent, removeEventById, events: myEvents } = useEvents();
 
   const addEventHandler = (newEventName: string) => {
     addEvent(newEventName);
@@ -28,7 +28,7 @@ const SideBar: React.FC = () => {
               <div className="color" />
               {name}
             </li>
-            <Delete height={23} />
+            <Delete onClick={() => removeEventById(id)} height={23} />
           </Styles.EventItem>
         ))}
       </Styles.ListContainer>
