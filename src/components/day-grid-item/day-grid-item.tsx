@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Modal from "../modal/modal";
 import * as Styles from "./day-grid-item.styled";
-import { useEvents } from "../../utils/hooks/useEvents";
+import DayEventsModal from "../day-events-modal/day-events-modal";
+import DayEvents from "../day-events/day-events";
 
 interface IProps {
   day: number;
@@ -11,8 +12,7 @@ interface IProps {
 
 const DayGridItem: React.FC<IProps> = ({ day, currentMonth, disabled }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { eventsEntities } = useEvents();
-  console.log(eventsEntities);
+  const dayId = `${currentMonth}-${day}`;
   return (
     <Styles.Container
       onClick={() => !disabled && setIsOpen(true)}
@@ -20,12 +20,13 @@ const DayGridItem: React.FC<IProps> = ({ day, currentMonth, disabled }) => {
     >
       <div className="bubble" />
       <p className="day">{day}</p>
+      {!disabled && <DayEvents dayId={dayId} />}
       <Modal
         modalId="day-events-modal"
         handleClose={() => setIsOpen(false)}
         isOpen={isOpen}
       >
-        {`Day: ${day} Month: ${currentMonth}`}
+        <DayEventsModal dayId={dayId} day={day} currentMonth={currentMonth} />
       </Modal>
     </Styles.Container>
   );

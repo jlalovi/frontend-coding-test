@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import { Cancel } from "@styled-icons/material-sharp";
 import ReactPortal from "../react-portal/react-portal";
 import * as Styles from "./modal.styled";
 
@@ -29,16 +30,17 @@ const Modal: React.FC<IProps> = ({
   return (
     <ReactPortal wrapperId={modalId}>
       <Styles.Container>
-        <button
-          onClick={(event) => {
-            event.stopPropagation();
-            handleClose();
-          }}
-          className="close-btn"
-        >
-          Close
-        </button>
-        <div className="modal-content">{children}</div>
+        <div className="modal-content">
+          <Cancel
+            height={24}
+            onClick={(event) => {
+              event.stopPropagation();
+              handleClose();
+            }}
+            className="close-button"
+          />
+          {children}
+        </div>
       </Styles.Container>
     </ReactPortal>
   );
