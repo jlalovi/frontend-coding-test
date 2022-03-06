@@ -7,6 +7,7 @@ interface IProps {
 export const Container = styled.div<IProps>`
   display: flex;
   position: relative;
+  overflow-y: auto;
   width: 100%;
   border: 1px solid ${({ theme }) => theme.gray_300};
   background-color: ${({ theme, disabled }) => disabled && theme.gray_100};

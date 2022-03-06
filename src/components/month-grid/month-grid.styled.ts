@@ -12,7 +12,7 @@ export const Container = styled.div`
 
 export const Week = styled.div`
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
 `;
 
 export const TopBar = styled.div`
@@ -24,6 +24,7 @@ export const TopBar = styled.div`
 
 export const MonthContainer = styled.div`
   display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
 `;
 
 export const ButtonGroup = styled.div`

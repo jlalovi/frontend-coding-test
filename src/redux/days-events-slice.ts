@@ -17,7 +17,6 @@ const daysEventsSlice = createSlice({
       action: PayloadAction<{ dayId: string; eventId: string }>
     ) {
       const dayEvents = state.daysEventsIds[action.payload.dayId];
-      console.log(dayEvents);
       if (dayEvents) {
         dayEvents.push(action.payload.eventId);
       } else {

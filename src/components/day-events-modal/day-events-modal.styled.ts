@@ -14,6 +14,7 @@ export const AddEventsContainer = styled.div`
   margin: 12px;
   display: flex;
   flex-grow: 1;
+  overflow: hidden;
 `;
 export const AllEventsList = styled.ul`
   border-right: 4px solid black;
@@ -22,4 +23,5 @@ export const AllEventsList = styled.ul`
 export const DayEventsList = styled.ul`
   flex-grow: 1;
   margin-left: 12px;
+  overflow: auto;
 `;
