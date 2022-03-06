@@ -37,12 +37,12 @@ const MonthGrid: React.FC = () => {
             {days.map((day, key) => (
               <DayGridItem
                 key={key}
-                {...{
-                  day,
-                  disabled:
-                    (weekIndex === 0 && day >= 25) ||
-                    (weekIndex === currentCalendar.length - 1 && day < 22),
-                }}
+                day={day}
+                currentMonth={currentMonth}
+                disabled={
+                  (weekIndex === 0 && day >= 25) ||
+                  (weekIndex === currentCalendar.length - 1 && day < 22)
+                }
               />
             ))}
           </Styles.Week>
