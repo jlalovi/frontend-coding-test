@@ -5,9 +5,26 @@ interface IEventItem {
 }
 
 export const Container = styled.div`
+  height: 100vh;
+  display: flex;
+  overflow-y: hidden;
+  flex-direction: column;
   border-top: 1px solid ${({ theme }) => theme.gray_300};
   font-size: 15px;
-  padding: 1.5rem;
+  > .switch-theme {
+    margin: 1rem;
+  }
+  > .add-event-container {
+    margin: 1rem;
+    margin-top: 0;
+  }
+`;
+
+export const ListContainer = styled.ul`
+  padding: 0 0.5rem 0 1rem;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
 `;
 
 export const EventItem = styled.li<IEventItem>`
@@ -43,8 +60,4 @@ export const EventItem = styled.li<IEventItem>`
       flex-grow: 1;
     }
   }
-`;
-
-export const ListContainer = styled.ul`
-  padding: 0.5rem 0rem;
 `;

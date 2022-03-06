@@ -15,12 +15,16 @@ const SideBar: React.FC = () => {
 
   return (
     <Styles.Container>
-      <button onClick={toggleTheme}>Switch theme</button>
-      <TextField
-        eventHandler={addEventHandler}
-        placeholder="Enter a new event"
-        buttonTitle="Create"
-      />
+      <button className="switch-theme" onClick={toggleTheme}>
+        Switch theme
+      </button>
+      <div className="add-event-container">
+        <TextField
+          eventHandler={addEventHandler}
+          placeholder="Enter a new event"
+          buttonTitle="Create"
+        />
+      </div>
       <Styles.ListContainer>
         {myEvents.map(({ name, color, id }) => (
           <Styles.EventItem key={id} color={color}>
