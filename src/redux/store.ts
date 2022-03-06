@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import themeSlice from "./theme-slice";
 import eventSlice from "./events-slice";
+import daysEventSlice from "./days-events-slice";
 
 const store = configureStore({
   // If it is an object of slice reducers, will automatically create the
@@ -9,6 +10,7 @@ const store = configureStore({
   reducer: {
     theme: themeSlice,
     events: eventSlice,
+    daysEvents: daysEventSlice,
   },
 });
 
