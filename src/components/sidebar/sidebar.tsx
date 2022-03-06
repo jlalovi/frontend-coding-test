@@ -4,13 +4,23 @@ import * as Styles from "./sidebar.styled";
 import TextField from "../textfield/textfield";
 import { useTheme } from "../../utils/hooks/useTheme";
 import { useEvents } from "../../utils/hooks/useEvents";
+import EditableText from "../editable-text/editable-text";
 
 const SideBar: React.FC = () => {
   const { toggleTheme } = useTheme();
-  const { addEvent, removeEventById, events: myEvents } = useEvents();
+  const {
+    addEvent,
+    removeEventById,
+    renameEvent,
+    events: myEvents,
+  } = useEvents();
 
   const addEventHandler = (newEventName: string) => {
     addEvent(newEventName);
+  };
+
+  const renameEventHandler = (id: string, newEventName: string) => {
+    renameEvent(id, newEventName);
   };
 
   return (
@@ -30,7 +40,15 @@ const SideBar: React.FC = () => {
           <Styles.EventItem key={id} color={color}>
             <div className="color-name-wrapper">
               <div className="color" />
-              <div className="name-wrapper">{name}</div>
+              <div className="name-wrapper">
+                <EditableText
+                  tooltip="Rename event"
+                  eventHandler={(newEventName: string) => {
+                    renameEventHandler(id, newEventName);
+                  }}
+                  initialValue={name}
+                />
+              </div>
             </div>
             <Delete
               className="remove-event-icon"

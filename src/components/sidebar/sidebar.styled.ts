@@ -37,9 +37,10 @@ export const EventItem = styled.li<IEventItem>`
   }
   .remove-event-icon {
     visibility: hidden;
+    opacity: 0.5;
   }
   .remove-event-icon:hover {
-    opacity: 0.5;
+    opacity: 1;
     cursor: pointer;
   }
 
