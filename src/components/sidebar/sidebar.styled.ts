@@ -10,28 +10,38 @@ export const Container = styled.div`
   padding: 1.5rem;
 `;
 
-export const EventItem = styled.div<IEventItem>`
-  display: inline-flex;
+export const EventItem = styled.li<IEventItem>`
+  display: flex;
   margin-bottom: 10px;
   align-items: center;
 
-  .color {
-    background-color: ${({ color }) => color};
-    border: 1px solid ${({ theme }) => theme.gray_800};
-    border-radius: 100%;
-    margin-right: 0.5rem;
-    width: 15px;
-    height: 15px;
+  :hover .remove-event-icon {
+    visibility: visible;
   }
-  .item-name {
-    list-style: none;
-    display: inline-flex;
-    cursor: text;
+  .remove-event-icon {
+    visibility: hidden;
   }
-
-  svg:hover {
+  .remove-event-icon:hover {
     opacity: 0.5;
     cursor: pointer;
+  }
+
+  .color-name-wrapper {
+    flex-grow: 1;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    .color {
+      background-color: ${({ color }) => color};
+      border: 1px solid ${({ theme }) => theme.gray_800};
+      border-radius: 100%;
+      margin-right: 0.5rem;
+      width: 15px;
+      height: 15px;
+    }
+    .name-wrapper {
+      flex-grow: 1;
+    }
   }
 `;
 

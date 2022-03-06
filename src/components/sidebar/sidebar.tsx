@@ -24,11 +24,15 @@ const SideBar: React.FC = () => {
       <Styles.ListContainer>
         {myEvents.map(({ name, color, id }) => (
           <Styles.EventItem key={id} color={color}>
-            <li className="item-name">
+            <div className="color-name-wrapper">
               <div className="color" />
-              {name}
-            </li>
-            <Delete onClick={() => removeEventById(id)} height={23} />
+              <div className="name-wrapper">{name}</div>
+            </div>
+            <Delete
+              className="remove-event-icon"
+              onClick={() => removeEventById(id)}
+              height={23}
+            />
           </Styles.EventItem>
         ))}
       </Styles.ListContainer>
