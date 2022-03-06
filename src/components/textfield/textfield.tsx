@@ -14,8 +14,9 @@ const TextField: React.FC<IProps> = ({
   const [value, setValue] = useState("");
 
   const submitHandler = () => {
-    if (value !== "") {
-      eventHandler(value);
+    const trimmedValue = value.trim();
+    if (trimmedValue !== "") {
+      eventHandler(trimmedValue);
       setValue("");
     }
   };
