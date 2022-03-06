@@ -8,12 +8,7 @@ import EditableText from "../editable-text/editable-text";
 
 const SideBar: React.FC = () => {
   const { toggleTheme } = useTheme();
-  const {
-    addEvent,
-    removeEventById,
-    renameEvent,
-    events: myEvents,
-  } = useEvents();
+  const { addEvent, removeEventById, renameEvent, getEvents } = useEvents();
 
   const addEventHandler = (newEventName: string) => {
     addEvent(newEventName);
@@ -22,6 +17,8 @@ const SideBar: React.FC = () => {
   const renameEventHandler = (id: string, newEventName: string) => {
     renameEvent(id, newEventName);
   };
+
+  const myEvents = getEvents();
 
   return (
     <Styles.Container>

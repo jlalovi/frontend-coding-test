@@ -11,14 +11,19 @@ export const useEvents = () => {
   const dispatch = useAppDispatch();
   const eventsEntityState = useAppSelector((state) => state.events);
 
-  const events: Array<Event> = [];
-  eventsEntityState.ids.forEach((eventId) => {
-    const event = eventsEntityState.entities[eventId];
-    event && events.push(event);
-  });
+  const getEvents = () => {
+    const events: Array<Event> = [];
+    eventsEntityState.ids.forEach((eventId) => {
+      const event = eventsEntityState.entities[eventId];
+      event && events.push(event);
+    });
+    return events;
+  };
 
   return {
-    events,
+    eventsIds: eventsEntityState.ids,
+    eventsEntities: eventsEntityState.entities,
+    getEvents,
     addEvent: (name: string) =>
       dispatch(
         addEvent({
