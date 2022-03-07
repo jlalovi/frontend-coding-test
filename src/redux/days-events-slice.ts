@@ -23,9 +23,22 @@ const daysEventsSlice = createSlice({
         state.daysEventsIds[action.payload.dayId] = [action.payload.eventId];
       }
     },
+    removeDayEvent(
+      state,
+      action: PayloadAction<{ dayId: string; eventId: string }>
+    ) {
+      const dayId = action.payload.dayId;
+      const dayEvents = state.daysEventsIds[dayId];
+      if (dayEvents) {
+        const filteredDayEvents = dayEvents.filter(
+          (eventId) => eventId !== action.payload.eventId
+        );
+        state.daysEventsIds[dayId] = filteredDayEvents;
+      }
+    },
   },
 });
 
-export const { addDayEvent } = daysEventsSlice.actions;
+export const { addDayEvent, removeDayEvent } = daysEventsSlice.actions;
 
 export default daysEventsSlice.reducer;

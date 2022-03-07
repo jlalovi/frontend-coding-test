@@ -12,7 +12,7 @@ interface IProps {
 }
 
 const DayEventsModal: React.FC<IProps> = ({ dayId, day, currentMonth }) => {
-  const { getEventsInDay, addDayEvent } = useDaysEvents();
+  const { getEventsInDay, addDayEvent, removeDayEvent } = useDaysEvents();
   const { getEvents } = useEvents();
   const events = getEvents();
   const eventsInDay = getEventsInDay(dayId);
@@ -32,7 +32,11 @@ const DayEventsModal: React.FC<IProps> = ({ dayId, day, currentMonth }) => {
         </Styles.AllEventsList>
         <Styles.DayEventsList>
           {eventsInDay.map((event) => (
-            <EventListItem key={event.id} event={event} />
+            <EventListItem
+              key={event.id}
+              onClick={() => removeDayEvent(dayId, event.id)}
+              event={event}
+            />
           ))}
         </Styles.DayEventsList>
       </Styles.AddEventsContainer>

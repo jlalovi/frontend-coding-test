@@ -1,5 +1,5 @@
 import { useAppSelector, useAppDispatch } from "../redux-hooks-utils";
-import { addDayEvent } from "../../redux/days-events-slice";
+import { addDayEvent, removeDayEvent } from "../../redux/days-events-slice";
 import { Event } from "../../utils/types";
 
 export const useDaysEvents = () => {
@@ -37,5 +37,7 @@ export const useDaysEvents = () => {
     getEventsIdsInDay,
     getEventsInDay,
     addDayEvent: addNewDayEvent,
+    removeDayEvent: (dayId: string, eventId: string) =>
+      dispatch(removeDayEvent({ dayId, eventId })),
   };
 };
