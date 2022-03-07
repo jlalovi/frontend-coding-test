@@ -2,10 +2,11 @@ import styled, { css } from "styled-components";
 import { ArrowLeftCircle } from "@styled-icons/bootstrap/ArrowLeftCircle";
 import { ArrowRightCircle } from "@styled-icons/bootstrap/ArrowRightCircle";
 
+const headerHeight = "140px";
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 140px 1fr;
+  grid-template-rows: ${headerHeight} 1fr;
   border-top: 1px solid ${({ theme }) => theme.gray_300};
   border-left: 1px solid ${({ theme }) => theme.gray_300};
 `;
@@ -25,6 +26,7 @@ export const TopBar = styled.div`
 export const MonthContainer = styled.div`
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
+  height: calc(100vh - ${headerHeight});
 `;
 
 export const ButtonGroup = styled.div`
