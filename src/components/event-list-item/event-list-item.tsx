@@ -9,7 +9,12 @@ interface IProps {
 
 const EventListItem: React.FC<IProps> = ({ event, onClick }) => {
   return (
-    <Styles.EventListItem onClick={onClick} key={event.id} color={event.color}>
+    <Styles.EventListItem
+      title={event.name}
+      onClick={onClick}
+      key={event.id}
+      color={event.color}
+    >
       <div className="color" />
       <p className="text">{event.name}</p>
     </Styles.EventListItem>
