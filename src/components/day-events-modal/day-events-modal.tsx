@@ -1,6 +1,7 @@
 import React from "react";
 import * as Styles from "./day-events-modal.styled";
 import { useDaysEvents } from "../../utils/hooks/useDaysEvents";
+import { MONTH_NAMES } from "../../utils/calendar";
 import { useEvents } from "../../utils/hooks/useEvents";
 import EventListItem from "../event-list-item/event-list-item";
 
@@ -18,7 +19,7 @@ const DayEventsModal: React.FC<IProps> = ({ dayId, day, currentMonth }) => {
 
   return (
     <Styles.Container>
-      <Styles.Title>{`Day: ${day} Month: ${currentMonth}`}</Styles.Title>
+      <Styles.Title>{`${day} of ${MONTH_NAMES[currentMonth]}`}</Styles.Title>
       <Styles.AddEventsContainer>
         <Styles.AllEventsList>
           {events.map((event) => (
