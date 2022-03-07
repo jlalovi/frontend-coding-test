@@ -6,4 +6,7 @@ export const ListContainer = styled.ul`
   margin: 12px;
   margin-right: 0;
   margin-bottom: 0;
+  * {
+    cursor: pointer;
+  }
 `;
