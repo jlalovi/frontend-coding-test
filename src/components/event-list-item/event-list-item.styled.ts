@@ -27,5 +27,6 @@ export const EventListItem = styled.div<IEventListItem>`
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    user-select: ${({ onClick }) => (onClick ? "none" : "inherit")};
   }
 `;

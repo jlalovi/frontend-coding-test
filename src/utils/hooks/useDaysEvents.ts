@@ -25,10 +25,17 @@ export const useDaysEvents = () => {
     return eventsInDay;
   };
 
+  const addNewDayEvent = (dayId: string, eventId: string) => {
+    const eventsIdsInDay = getEventsIdsInDay(dayId);
+    const isNewEvent = eventsIdsInDay.includes(eventId);
+    if (!isNewEvent) {
+      dispatch(addDayEvent({ dayId, eventId }));
+    }
+  };
+
   return {
     getEventsIdsInDay,
     getEventsInDay,
-    addDayEvent: (dayId: string, eventId: string) =>
-      dispatch(addDayEvent({ dayId, eventId })),
+    addDayEvent: addNewDayEvent,
   };
 };
