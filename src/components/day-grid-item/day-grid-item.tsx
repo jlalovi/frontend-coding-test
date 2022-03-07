@@ -13,12 +13,14 @@ interface IProps {
 const DayGridItem: React.FC<IProps> = ({ day, currentMonth, disabled }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dayId = `${currentMonth}-${day}`;
-  const currentDay = new Date().getDate();
+  const now = new Date();
+  const today = now.getDate();
+  const todayMonth = now.getMonth();
   return (
     <Styles.Container
       onClick={() => !disabled && setIsOpen(true)}
       disabled={disabled}
-      isCurrentDay={currentDay === day}
+      isToday={today === day && todayMonth === currentMonth}
     >
       <div className="bubble" />
       <p className="day">{day}</p>
