@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface IProps {
   disabled: boolean;
+  isCurrentDay: boolean;
 }
 
 export const Container = styled.div<IProps>`
@@ -25,6 +26,7 @@ export const Container = styled.div<IProps>`
     height: 30px;
     width: 30px;
     border-radius: 16px;
-    background-color: ${({ theme }) => theme.gray_100};
+    background-color: ${({ theme, isCurrentDay }) =>
+      isCurrentDay ? theme.dark_blue_500 : theme.gray_100};
   }
 `;
