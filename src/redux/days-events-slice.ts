@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface IDaysEventsState {
+export interface IDaysEventsState {
   daysEventsIds: { [dayId: string]: string[] };
 }
 
